@@ -1,0 +1,20 @@
+/* Import the google fonts (Bebas for headers, Overpass for body copy) */
+@import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap');
+:root{
+	/* Set the variables for the two font types */
+	--font-header: 'Open Sans Condensed', cursive;
+	--font-primary: 'Overpass', sans-serif;
+	/* Set the base size of fonts to be 10px */
+	font-size: 10px;
+}
+/* Make all fonts the normal size by default */
+body{
+	font-size: 1.6rem;
+	font-family: var(--font-primary);
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: var(--font-header);
+	text-transform: uppercase;
+	font-weight: 700;
+}
