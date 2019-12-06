@@ -1,0 +1,67 @@
+/* Modify component based on classes */
+.card {
+	--bg: var(--salmon);
+	--text-col: white;
+}
+.card.invert{
+	--bg: var(--pink);
+	--text-col: var(--gray);	
+}
+/* Create component */
+.card{
+	background-color: var(--bg);
+	color: var(--text-col);
+	padding: 60px;
+	font-size: 2rem;
+}
+.card .content{
+	display: flex;
+}
+/* Resive the svg */
+.card svg{
+	width: 100px;
+	height: 100px;
+}
+/* Size the h1 and h2 to be the same */
+.card h1, .card h2{
+	font-size: 6rem;
+	margin: 0;
+	line-height: 0.9;
+}
+/* Space out the header from the rest of the card */
+.card h2{
+	padding-bottom: 50px;
+}
+/* Style the paragraph that follows the h2 with no margin or padding */
+.card h2~p{
+	margin: 0;
+	padding: 0;
+}
+/* Style the links */
+.card a{
+	font-weight: 900;
+	text-decoration: none;
+	color: var(--text-col);
+}
+/* Style the lists */
+.card ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.card ul li{
+	padding: 3px 0px;
+}
+/* Add padding after the first list element */
+.card ul li:nth-of-type(1){
+	padding-bottom: 20px;
+}
+/* Add padding before the last list element */
+.card ul li:last-of-type{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+/* Allow some elements to bold themselves */
+.card .bolded{
+	font-weight: 900;
+}

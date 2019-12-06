@@ -5,8 +5,10 @@ html {
 *, *:before, *:after {
 	box-sizing: inherit;
 }
-
 body{
 	padding: 0;
-	margin: 0;
+	/* Create the side black borders IF the page is larger than 1600px */
+	max-width: 1600px;
+	margin: 0 auto;
+	background: rgb(19, 19, 19);
 }
