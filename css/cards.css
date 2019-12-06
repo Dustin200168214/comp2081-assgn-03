@@ -30,7 +30,7 @@
 }
 /* Space out the header from the rest of the card */
 .card h2{
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 }
 /* Style the paragraph that follows the h2 with no margin or padding */
 .card h2~p{
@@ -64,4 +64,19 @@
 /* Allow some elements to bold themselves */
 .card .bolded{
 	font-weight: 900;
+}
+/* Style the spans */
+.card span{
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.card h3{
+	color: var(--salmon);
+}
+/* Space out the paragraphs on inverted */
+.card.invert p{
+	padding: 10px 0px;
+}
+.card.invert p:nth-of-type(1){
+	padding-top: 0;
 }
