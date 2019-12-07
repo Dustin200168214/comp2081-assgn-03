@@ -1,0 +1,26 @@
+.pies{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	background-color: var(--pink);
+}
+.pies text{
+	font: var(--font-header);
+	text-transform: uppercase;
+	font-weight: 900;
+	fill: var(--gray);
+}
+.pies .large{
+	font-size: 2.1rem;
+}
+.pies g.numbers{
+	font-size: 1rem;
+}
+.pies .small{
+	font-size: 1.5rem;
+}
+.pies .xl{
+	font-size: 3.5rem;
+	fill: white;
+}

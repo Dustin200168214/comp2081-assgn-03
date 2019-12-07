@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <title>Assignment Three - Canvas & SVG</title>
 <link href="css/main.css" rel="stylesheet" />
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -89,22 +91,73 @@
 		</div>
 	</section>
 	
-	<section>
+	<section class="pies">
 		<!-- this section should show the circle graphs explaining peak hours -->
 		<!-- STEP FOUR create this section using SVGs - the first two can be vectors, but create the last circle graph programmatically - a few hints, you can create text and curves with SVG and can also write on a curve. https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial will be a big help -->
-		
+		<img src="/img/weekdays.svg" alt="Weekdays section" width="600px"/>
+		<svg height="600px" width="400px">
+			<!-- Title -->
+			<text x="160" y="110" class="large">Weekends</text>
+			<text x="155" y="130" class="large">& Holidays</text>
+			<!-- Red Lines -->
+			<path d="M 150,110 C 95 110, 70 110, 70 135" stroke="red" stroke-width="3" fill="none"></path>
+
+			<path d="M 280,110 C 345 110, 360 110, 360 135" stroke="red" stroke-width="3" fill="none"></path>
+			<!-- Pie -->
+			<circle fill="#8ec341" cx="210" cy="267.31" r="89.513"/>
+			<!-- Numbers: AM -->
+			<g class="numbers">
+				<text x="236" y="177">1</text>
+				<text x="255" y="186">2</text>
+				<text x="275" y="202">3</text>
+				<text x="290" y="220">4</text>
+				<text x="300" y="242">5</text>
+				<text x="305" y="266">6</text>
+				<text x="302" y="290">7</text>
+				<text x="293" y="312">8</text>
+				<text x="283" y="330">9</text>
+				<text x="266" y="347">10</text>
+				<text x="247" y="358">11</text>
+			</g>
+			<!-- Numbers: PM -->
+			<g class="numbers">
+				<text x="186" y="177">11</text>
+				<text x="160" y="186">10</text>
+				<text x="142" y="202">9</text>
+				<text x="126" y="220">8</text>
+				<text x="114" y="242">7</text>
+				<text x="108" y="266">6</text>
+				<text x="112" y="290">5</text>
+				<text x="120" y="312">4</text>
+				<text x="131" y="330">3</text>
+				<text x="146" y="347">2</text>
+				<text x="170" y="358">1</text>
+			</g>
+			<!-- Other Titles -->
+			<text x="175" y="160" class="small">Midnight</text>
+			<text x="188" y="375" class="small">Noon</text>
+			<text x="130" y="280" class="xl">P.M.</text>
+			<text x="225" y="280" class="xl">A.M.</text>
+		</svg>
 	</section>
 	
-	<section>
+	<section class="card">
 		<!-- let's put that icon here too -->
-		<h2> Your Electricity Use  </h2>
-		<!-- STEP FIVE - using <canvas>, create a line graph showing electricity consumption over a weekly period-->
-
+		<div class="content">
+			<img src="img/star.svg" alt="A Star" width="100px" height="100px" />
+			<div style="width:100%">
+				<h2> Your Electricity Use </h2>
+				<!-- STEP FIVE - using <canvas>, create a line graph showing electricity consumption over a weekly period-->
+				<!-- I decided to use refactor the canvas.html file provided and used the canvasjs library -->
+				<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+			</div>
+		</div>
+		
+		
 	</section>
 </main>
 <footer>
 	&copy; 2019 - COMP2081 Assign Three
 </footer>
-
 </body>
 </html>
